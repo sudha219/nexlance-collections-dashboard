@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.js';
 import { Role } from '../types/index.js';
+import { NEXLANCE_LOGO } from '../assets/logo.js';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user, logout, switchRole } = useAuth();
@@ -89,8 +90,12 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Brand Logo & System Info */}
           <div className="flex items-center space-x-3.5">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-violet-600 to-cyan-400 text-white font-black text-lg flex items-center justify-center shadow-lg shadow-indigo-500/25 ring-1 ring-white/20">
-              NX
+            <div className="w-10 h-10 rounded-xl bg-white/10 p-1 flex items-center justify-center shadow-lg shadow-indigo-500/20 ring-1 ring-white/20 backdrop-blur-sm">
+              <img
+                src={NEXLANCE_LOGO}
+                alt="Nexlance Collections Logo"
+                className="w-full h-full object-contain filter drop-shadow"
+              />
             </div>
             <div>
               <div className="flex items-center space-x-2">

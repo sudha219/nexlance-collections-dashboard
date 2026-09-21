@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Lock, User, ShieldCheck, KeyRound, AlertCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.js';
+import { NEXLANCE_LOGO } from '../assets/logo.js';
 
 export const Login: React.FC = () => {
   const { loginStep1, verifyTotp, changePassword } = useAuth();
@@ -120,8 +121,8 @@ export const Login: React.FC = () => {
     <div className="min-h-screen bg-slate-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-white text-3xl font-black shadow-lg shadow-emerald-500/30">
-            ⚡
+          <div className="w-16 h-16 rounded-2xl bg-white/10 p-2 flex items-center justify-center shadow-xl shadow-indigo-500/20 border border-white/20 backdrop-blur-sm">
+            <img src={NEXLANCE_LOGO} alt="Nexlance Logo" className="w-full h-full object-contain filter drop-shadow" />
           </div>
         </div>
         <h2 className="mt-4 text-center text-2xl font-bold tracking-tight text-white">
