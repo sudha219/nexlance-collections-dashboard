@@ -190,19 +190,19 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                       to={item.path}
                       className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all duration-200 ${
                         isActive
-                          ? 'bg-gradient-to-r from-indigo-600/20 via-indigo-600/10 to-transparent text-indigo-300 font-bold border-l-4 border-indigo-500 shadow-sm'
+                          ? 'bg-gradient-to-r from-[#facc15] via-[#38bdf8] via-[#a855f7] to-[#fb923c] text-slate-950 font-black shadow-lg shadow-amber-500/20 scale-[1.01]'
                           : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/50'
                       }`}
                     >
                       <div className="flex items-center space-x-2.5">
-                        <Icon className={`w-4 h-4 ${isActive ? 'text-indigo-400' : 'text-slate-400'}`} />
-                        <span>{item.label}</span>
+                        <Icon className={`w-4 h-4 ${isActive ? 'text-slate-950 stroke-[2.5]' : 'text-slate-400'}`} />
+                        <span className={isActive ? 'text-slate-950 font-black tracking-tight' : ''}>{item.label}</span>
                       </div>
                       {item.badge && (
                         <span
-                          className={`text-[9px] px-1.5 py-0.5 rounded font-bold uppercase ${
+                          className={`text-[9px] px-1.5 py-0.5 rounded font-black uppercase ${
                             isActive
-                              ? 'bg-indigo-500 text-white'
+                              ? 'bg-slate-950 text-white'
                               : 'bg-slate-800 text-slate-400 border border-slate-700'
                           }`}
                         >

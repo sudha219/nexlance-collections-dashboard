@@ -278,7 +278,7 @@ export const AgentWorklist: React.FC = () => {
                     onClick={() => selectAccount(acc.allocation_id)}
                     className={`p-3 rounded-xl border text-left cursor-pointer transition-all ${
                       isSelected
-                        ? 'border-emerald-500 bg-emerald-50/40 shadow-sm ring-1 ring-emerald-500'
+                        ? 'border-amber-400/80 bg-gradient-to-r from-amber-500/10 via-cyan-500/10 to-orange-500/10 shadow-md ring-2 ring-amber-400/50 scale-[1.01]'
                         : 'border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                     }`}
                   >

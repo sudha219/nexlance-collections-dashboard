@@ -156,6 +156,9 @@ export const FounderOpsDashboard: React.FC = () => {
     <div className="space-y-6">
       {/* 1. Sleek Command Header with Segmented Filter Chips */}
       <div className="bg-gradient-to-r from-[#0c1322] via-[#111936] to-[#0c1322] border border-indigo-900/40 rounded-2xl p-6 text-white shadow-md relative overflow-hidden">
+        {/* Signature top accent line */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#facc15] via-[#38bdf8] via-[#a855f7] to-[#fb923c]"></div>
+
         {/* Ambient background decoration */}
         <div className="absolute -right-16 -top-16 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute -left-16 -bottom-16 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -170,8 +173,8 @@ export const FounderOpsDashboard: React.FC = () => {
                 <h1 className="text-xl font-black text-white tracking-tight">
                   Executive Collections Command Center
                 </h1>
-                <span className="flex items-center space-x-1 text-[10px] font-bold bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="flex items-center space-x-1 text-[10px] font-black bg-gradient-to-r from-[#facc15] via-[#38bdf8] to-[#fb923c] text-slate-950 px-2.5 py-0.5 rounded-full shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-950 animate-pulse"></span>
                   <span>LIVE RECOVERY</span>
                 </span>
               </div>
@@ -190,7 +193,7 @@ export const FounderOpsDashboard: React.FC = () => {
                   onClick={() => setSelectedClientId(c.client_id)}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     selectedClientId === c.client_id
-                      ? 'bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-sm'
+                      ? 'bg-gradient-to-r from-[#facc15] via-[#38bdf8] via-[#a855f7] to-[#fb923c] text-slate-950 font-black shadow-md shadow-amber-500/25 scale-[1.02]'
                       : 'text-slate-400 hover:text-white'
                   }`}
                 >
@@ -202,9 +205,9 @@ export const FounderOpsDashboard: React.FC = () => {
             {/* 1-Click Client MIS Export Button */}
             <Link
               to="/mis-export"
-              className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 shadow-lg shadow-emerald-600/25 border border-emerald-400/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center px-4 py-2 rounded-xl text-xs font-black text-slate-950 bg-gradient-to-r from-[#facc15] via-[#38bdf8] via-[#a855f7] to-[#fb923c] hover:opacity-95 shadow-lg shadow-amber-500/25 border border-white/30 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
-              <Download className="w-4 h-4 mr-1.5" />
+              <Download className="w-4 h-4 mr-1.5 text-slate-950 stroke-[2.5]" />
               1-Click Client MIS Export
             </Link>
           </div>
